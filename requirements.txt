@@ -1,0 +1,7 @@
+gymnasium[box2d]
+stable-baselines3[extra]
+torch
+numpy
+matplotlib
+tensorboard
+pandas
