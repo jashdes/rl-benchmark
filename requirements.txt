@@ -1,4 +1,4 @@
-gymnasium[box2d]
+gymnasium
 stable-baselines3[extra]
 torch
 numpy
