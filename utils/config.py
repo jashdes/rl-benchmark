@@ -17,6 +17,5 @@ class ExperimentConfig:
     n_steps: int = 2048  # For PPO
     batch_size: int = 64
 
-
-def to_dict(self):
-    return asdict(self)
+    def to_dict(self):
+        return asdict(self)

@@ -33,7 +33,7 @@ class ExperimentLogger:
         """Save final evaluation results."""
         results_path = self.exp_dir / "results.json"
         with open(results_path, "w") as f:
-            json.dump(self.metrics, f, indents=2)
+            json.dump(results, f, indent=2)
         print(f"Results saved to {results_path}")
 
     def save_metrics(self):
