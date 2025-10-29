@@ -5,7 +5,7 @@ from dataclasses import dataclass, asdict
 class ExperimentConfig:
     """Configuration for a single experiment."""
 
-    algorithim: str
+    algorithm: str
     env_name: str
     total_timesteps: int
     n_eval_episodes: int

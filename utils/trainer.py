@@ -20,7 +20,7 @@ class RLTrainer:
     def __init__(self, config: ExperimentConfig):
         self.config = config
         self.logger = ExperimentLogger(
-            experiment_name=f"{config.algorithim}_{config.env_name}"
+            experiment_name=f"{config.algorithm}_{config.env_name}"
         )
         self.logger.log_config(config.to_dict())
 
@@ -39,13 +39,13 @@ class RLTrainer:
 
     def _create_model(self):
         """Initialize the RL algorithm."""
-        if self.config.algorithim not in self.ALGORITHMS:
+        if self.config.algorithm not in self.ALGORITHMS:
             raise ValueError(
-                f"Algorithm {self.config.algorithim} not supported."
+                f"Algorithm {self.config.algorithm} not supported."
                 f"Choose from: {list(self.ALGORITHMS.keys())}"
             )
 
-        AlgoClass = self.ALGORITHMS[self.config.algorithim]
+        AlgoClass = self.ALGORITHMS[self.config.algorithm]
 
         model = AlgoClass(
             "MlpPolicy",
@@ -61,9 +61,7 @@ class RLTrainer:
 
     def train(self):
         """Train the model."""
-        print(
-            f"n\Strating training: {self.config.algorithim} on {self.config.env_name}"
-        )
+        print(f"n\Strating training: {self.config.algorithm} on {self.config.env_name}")
         print(f"Total timesteps: {self.config.total_timesteps}")
 
         self.model.learn(total_timesteps=self.config.total_timesteps)
