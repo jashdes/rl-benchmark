@@ -1,5 +1,6 @@
 # Experiment outputs
 experiments/results/
+experiments/results_old/
 *.csv
 algorithm_comparison.png
 
