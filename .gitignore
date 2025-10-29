@@ -1,8 +1,33 @@
-venv/
+# Experiment outputs
+experiments/results/
+*.csv
+algorithm_comparison.png
+
+# Model files
+*.zip
+
+# Tensorboard logs
+tensorboard_logs/
+
+# Python
 __pycache__/
 *.py[cod]
-tensorboard_logs/
-*.zip
-ppo_cartpole*
+*.pyc
+
+# Virtual environment
+venv/
+env/
+
+# OS
 .DS_Store
-experiments/results/
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated plots
+*.png
+!docs/*.png
