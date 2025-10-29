@@ -1,6 +1,7 @@
 import gymnasium as gym
 from stable_baselines3 import PPO, DQN, SAC
 from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.monitor import Monitor
 import torch
 
 from utils.experiment import ExperimentLogger
@@ -31,7 +32,7 @@ class RLTrainer:
         print(f"Using device: {self.device}")
 
         # Create enviornment
-        self.env = gym.make(config.env_name)
+        self.env = Monitor(gym.make(config.env_name))
 
         # Create model
         self.model = self._create_model()
