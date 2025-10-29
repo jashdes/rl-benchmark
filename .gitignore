@@ -5,3 +5,4 @@ tensorboard_logs/
 *.zip
 ppo_cartpole*
 .DS_Store
+experiments/results/

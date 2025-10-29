@@ -12,7 +12,7 @@ class RLTrainer:
 
     ALGORITHMS = {
         "PPO": PPO,
-        "DGN": DQN,
+        "DQN": DQN,
         "SAC": SAC,
     }
 
