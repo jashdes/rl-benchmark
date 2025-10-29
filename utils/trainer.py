@@ -34,7 +34,7 @@ class RLTrainer:
         self.env = gym.make(config.env_name)
 
         # Create model
-        self.model = self.create_model()
+        self.model = self._create_model()
 
     def _create_model(self):
         """Initialize the RL algorithm."""
